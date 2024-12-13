@@ -21,11 +21,11 @@ import { getTransferSolInstruction } from "@solana-program/system";
 const DESTINATION_ACCOUNT_ADDRESS = address("GdG9JHTSWBChvf6dfBATEYCZbDwKtcC6tJEpqoyuVfqV");
 const SOURCE_ACCOUNT_SIGNER = await createKeyPairSignerFromBytes(new Uint8Array(SECRET_KEY));
 
-getTransferSolInstruction({
-  amount: lamports(1_000_000_000n), // 1 billion lamports = 1 SOL
-  destination: DESTINATION_ACCOUNT_ADDRESS,
-  source: SOURCE_ACCOUNT_SIGNER,
-});
+getTransferSolInstruction({ // [!code highlight]
+  amount: lamports(1_000_000_000n), // 1 billion lamports = 1 SOL // [!code highlight]
+  destination: DESTINATION_ACCOUNT_ADDRESS, // [!code highlight]
+  source: SOURCE_ACCOUNT_SIGNER, // [!code highlight]
+}); // [!code highlight]
 ```
 
 ## Parameters
