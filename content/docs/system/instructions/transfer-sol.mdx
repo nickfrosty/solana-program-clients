@@ -1,0 +1,53 @@
+---
+title: Transfer SOL
+---
+
+import { Tab, Tabs } from 'fumadocs-ui/components/tabs';
+
+Transfer SOL (lamports) from one account to another.
+
+## Import
+
+```ts
+import { getTransferSolInstruction } from "@solana-program/system";
+```
+
+## Usage
+
+```ts
+import { lamports } from "@solana/web3.js";
+import { getTransferSolInstruction } from "@solana-program/system";
+
+const DESTINATION_ACCOUNT_ADDRESS = address("GdG9JHTSWBChvf6dfBATEYCZbDwKtcC6tJEpqoyuVfqV");
+const SOURCE_ACCOUNT_SIGNER = await createKeyPairSignerFromBytes(new Uint8Array(SECRET_KEY));
+
+getTransferSolInstruction({
+  amount: lamports(1_000_000_000n), // 1 billion lamports = 1 SOL
+  destination: DESTINATION_ACCOUNT_ADDRESS,
+  source: SOURCE_ACCOUNT_SIGNER,
+});
+```
+
+## Parameters
+
+```ts
+import { type TransferSolInput } from "@solana-program/system"
+```
+
+### source
+
+`TransactionSigner` 
+
+Signer for the transaction that will have its account's balance reduced.
+
+### destination
+
+`Address` 
+
+The destination account address to receive the SOL/lamports.
+
+### amount
+
+`number | bigint`
+
+Amount of lamports to be transferred from the [`source`](#source) to the [`destination`](#destination)

@@ -1,0 +1,41 @@
+---
+title: Assign
+---
+
+import { Tab, Tabs } from 'fumadocs-ui/components/tabs';
+
+todo: add a description here
+
+## Import
+
+<Tabs groupId="language" items={["TypeScript", "Rust"]}>
+
+```ts tab value="TypeScript"
+import { getAssignInstruction } from "@solana-program/system" 
+```
+
+```ts tab value="Rust"
+// rust import
+```
+
+</Tabs>
+
+## Usage
+
+<Tabs groupId="language" items={["TypeScript", "Rust"]}>
+
+```ts tab value="TypeScript"
+export function getAssignInstruction<
+  TAccountAccount extends string,
+  TProgramAddress extends Address = typeof SYSTEM_PROGRAM_ADDRESS,
+>(
+  input: AssignInput<TAccountAccount>,
+  config?: { programAddress?: TProgramAddress }
+): AssignInstruction<TProgramAddress, TAccountAccount>
+```
+
+```ts tab value="Rust"
+rust
+```
+
+</Tabs>

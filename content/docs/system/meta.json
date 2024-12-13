@@ -1,0 +1,20 @@
+{
+  "title": "System Program",
+  "description": "The Solana System program",
+  "icon": "Building2",
+  "root": true,
+  "pages": [
+    "---Guide---",
+    "index",
+    "comparisons",
+    "---Instructions---",
+    "instructions",
+    "---Errors---",
+    "errors",
+    "---UI---",
+    "theme",
+    "components",
+    "mdx",
+    "blocks"
+  ]
+}
